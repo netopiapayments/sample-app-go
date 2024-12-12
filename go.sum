@@ -53,6 +53,8 @@ github.com/netopiapayments/go-sdk v1.0.1 h1:7RDqZvashi5vEpR0Sqk5eN+eVeKXwKXo8vlo
 github.com/netopiapayments/go-sdk v1.0.1/go.mod h1:ZKFCL9/80X5OQp6swY0wXDCPKzlEkVuVuJxZ7mrPzOU=
 github.com/netopiapayments/go-sdk v1.1.2 h1:+X88w3ygt7xPBpliRgI1DLYYPCAL+6w4iBFb87gqkGg=
 github.com/netopiapayments/go-sdk v1.1.2/go.mod h1:ZKFCL9/80X5OQp6swY0wXDCPKzlEkVuVuJxZ7mrPzOU=
+github.com/netopiapayments/go-sdk v1.1.3 h1:7xjsWgq6dlukM4QhA795t2uGLxSXbtLO/ISODuil0Vk=
+github.com/netopiapayments/go-sdk v1.1.3/go.mod h1:ZKFCL9/80X5OQp6swY0wXDCPKzlEkVuVuJxZ7mrPzOU=
 github.com/pelletier/go-toml/v2 v2.2.2 h1:aYUidT7k73Pcl9nb2gScu7NSrKCSHIDE89b3+6Wq+LM=
 github.com/pelletier/go-toml/v2 v2.2.2/go.mod h1:1t835xjRzz80PqgE6HHgN2JOsmgYu/h4qDAS4n929Rs=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=

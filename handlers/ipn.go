@@ -2,12 +2,21 @@ package handlers
 
 import (
 	"net/http"
+	"sample/services"
 
 	"github.com/gin-gonic/gin"
 )
 
+type IPNHandler struct {
+	paymentService *services.NetopiaService
+}
+
+func NewIPNHandler(ps *services.NetopiaService) *IPNHandler {
+	return &IPNHandler{paymentService: ps}
+}
+
 // POST /ipn
-func (h *PaymentHandler) IPNHandler(c *gin.Context) {
+func (h *IPNHandler) IPNHandler(c *gin.Context) {
 	verificationResult, err := h.paymentService.VerifyIPN(c.Request)
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": "IPN Verification failed", "details": err.Error()})

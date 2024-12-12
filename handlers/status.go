@@ -14,10 +14,10 @@ type StatusPayload struct {
 }
 
 type StatusHandler struct {
-	paymentService *services.PaymentService
+	paymentService *services.NetopiaService
 }
 
-func NewStatusHandler(ps *services.PaymentService) *StatusHandler {
+func NewStatusHandler(ps *services.NetopiaService) *StatusHandler {
 	return &StatusHandler{paymentService: ps}
 }
 

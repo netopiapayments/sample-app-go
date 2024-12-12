@@ -11,16 +11,16 @@ import (
 	"github.com/netopiapayments/go-sdk/responses"
 )
 
-type PaymentService struct {
+type NetopiaService struct {
 	client *netopia.PaymentClient
 	cfg    *config.Config
 }
 
-func NewPaymentService(c *netopia.PaymentClient, cfg *config.Config) *PaymentService {
-	return &PaymentService{client: c, cfg: cfg}
+func NewNetopiaService(c *netopia.PaymentClient, cfg *config.Config) *NetopiaService {
+	return &NetopiaService{client: c, cfg: cfg}
 }
 
-func (ps *PaymentService) StartPayment(req *requests.StartPaymentRequest) (*responses.StartPaymentResponse, error) {
+func (ps *NetopiaService) StartPayment(req *requests.StartPaymentRequest) (*responses.StartPaymentResponse, error) {
 	req.Order.PosSignature = ps.cfg.PosSignature
 	req.Config.NotifyURL = ps.cfg.NotifyURL
 	req.Config.RedirectURL = ps.cfg.RedirectURL
@@ -32,10 +32,10 @@ func (ps *PaymentService) StartPayment(req *requests.StartPaymentRequest) (*resp
 	return ps.client.StartPayment(req)
 }
 
-func (ps *PaymentService) VerifyIPN(r *http.Request) (*netopia.IPNVerificationResult, error) {
+func (ps *NetopiaService) VerifyIPN(r *http.Request) (*netopia.IPNVerificationResult, error) {
 	return ps.client.VerifyIPN(r)
 }
 
-func (ps *PaymentService) GetStatus(ntpID, orderID string) (*responses.StatusResponse, error) {
+func (ps *NetopiaService) GetStatus(ntpID, orderID string) (*responses.StatusResponse, error) {
 	return ps.client.GetStatus(ntpID, orderID)
 }

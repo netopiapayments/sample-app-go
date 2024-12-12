@@ -10,10 +10,10 @@ import (
 )
 
 type PaymentHandler struct {
-	paymentService *services.PaymentService
+	paymentService *services.NetopiaService
 }
 
-func NewPaymentHandler(ps *services.PaymentService) *PaymentHandler {
+func NewPaymentHandler(ps *services.NetopiaService) *PaymentHandler {
 	return &PaymentHandler{paymentService: ps}
 }
 

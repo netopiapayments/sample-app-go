@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "314dd6de-f41a-4db9-be83-4f8261f5e5c8",
+		"name": "Netopia GO SDK Sample",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "40174907"
+	},
+	"item": [
+		{
+			"name": "Payment START",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"config\": {\n    \"language\": \"ro\"\n  },\n  \"payment\": {\n    \"options\": {\n      \"installments\": 0,\n      \"bonus\": 0\n    },\n    \"instrument\": {\n      \"type\": \"card\",\n      \"account\": \"4111111111111111\",\n      \"expMonth\": 12,\n      \"expYear\": 2025,\n      \"secretCode\": \"123\",\n      \"token\": \"\"\n    },\n    \"data\": {\n      \"BROWSER_USER_AGENT\": \"Mozilla/5.0\",\n      \"BROWSER_TZ\": \"Europe/Bucharest\"\n    }\n  },\n  \"order\": {\n    \"dateTime\": \"2024-12-12T14:30:00Z\",\n    \"description\": \"Test Payment\",\n    \"orderID\": \"ORDER-12347\",\n    \"amount\": 100.50,\n    \"currency\": \"RON\",\n    \"billing\": {\n      \"email\": \"client@example.com\",\n      \"phone\": \"0741234567\",\n      \"firstName\": \"John\",\n      \"lastName\": \"Doe\",\n      \"city\": \"Bucuresti\",\n      \"country\": 642,\n      \"contryName\": \"Romania\",\n      \"state\": \"Bucuresti\",\n      \"postalCode\": \"010101\",\n      \"details\": \"Test\"\n    },\n    \"shipping\": {\n      \"email\": \"client@example.com\",\n      \"phone\": \"0741234567\",\n      \"firstName\": \"John\",\n      \"lastName\": \"Doe\",\n      \"city\": \"Bucuresti\",\n      \"country\": 642,\n      \"contryName\": \"Romania\",\n      \"state\": \"Bucuresti\",\n      \"postalCode\": \"010101\",\n      \"details\": \"Test\"\n    },\n    \"products\": [\n      {\n        \"name\": \"Test Product\",\n        \"code\": \"PROD001\",\n        \"category\": \"Test Category\",\n        \"price\": 100.50,\n        \"vat\": 19\n      }\n    ],\n    \"installments\": {\n      \"selected\": 0,\n      \"available\": [0]\n    },\n    \"data\": {\n      \"property1\": \"string\",\n      \"property2\": \"string\"\n    }\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/start-payment"
+			},
+			"response": []
+		},
+		{
+			"name": "IPN",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Verification-token",
+						"value": "1222",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/ipn"
+			},
+			"response": []
+		},
+		{
+			"name": "Order Get Status",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ntpID\": \"2109626\",\n    \"orderID\": \"ORDER-12347\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/status"
+			},
+			"response": []
+		}
+	]
+}

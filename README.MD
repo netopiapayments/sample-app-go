@@ -18,8 +18,8 @@ This is a sample Go application demonstrating the integration with the Netopia P
 
 1. Clone the repository:
    ```bash
-    git clone https://github.com/yourusername/your-repo-name.git
-    cd your-repo-name
+    git clone https://github.com/netopiapayments/sample-app-go.git
+    cd sample-app-go
    ```
 
 2. Install dependencies:
@@ -78,6 +78,8 @@ This is a sample Go application demonstrating the integration with the Netopia P
 
 ```
 .
+├── collection           # Basic POSTMAN collection for calling the endpoints of the sample app
+│   └── Netopia GO SDK Sample.postman_collection.json        
 ├── cmd
 │   └── main.go          # Entry point of the application
 ├── config
@@ -87,7 +89,7 @@ This is a sample Go application demonstrating the integration with the Netopia P
 │   └── status.go        # Handler for status route
 │   └── ipn.go           # Handler for IPN route
 ├── services
-│   └── payment.go       # Business logic for payment processing
+│   └── netopia.go       # Business logic for payment processing
 ├── go.mod               # Module dependencies
 ├── go.sum               # Checksums for dependencies
 └── .env                 # Environment variables
