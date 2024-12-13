@@ -1,0 +1,49 @@
+# Directories for Go modules
+/bin/
+/pkg/
+/vendor/
+
+# Editor specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build output
+*.out
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Dependency management
+go.sum
+
+# Test and coverage results
+*.test
+*.prof
+coverage.out
+
+# Logs and debugging
+*.log
+*.trace
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.old
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# GoLand specific
+*.iml
+.idea/
+
+# Ignore private keys
+*.key
+*.pem
+
+.env

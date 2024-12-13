@@ -1,17 +1,17 @@
-# Netopia Payment SDK - Sample Application
+# NETOPIA Payment SDK - Sample Application
 
-This is a sample Go application demonstrating the integration with the Netopia Payment SDK using the [Gin Web Framework](https://gin-gonic.com/).
+This is a sample Go application demonstrating the integration with the NETOPIA Payment SDK using the [Gin Web Framework](https://gin-gonic.com/).
 
 ## Features
 
 - **Start Payment**: Initiates a payment request with necessary configurations.
 - **Check Payment Status**: Queries the payment status based on transaction and order IDs.
-- **IPN Verification**: Processes and validates IPN (Instant Payment Notification) messages from Netopia.
+- **IPN Verification**: Processes and validates IPN (Instant Payment Notification) messages from NETOPIA.
 
 ## Requirements
 
 - Go version 1.18 or higher
-- [Netopia Payment SDK](https://github.com/netopiapayments/go-sdk)
+- [NETOPIA Payment SDK](https://github.com/netopiapayments/go-sdk)
 - `.env` file for configuration
 
 ## Installation
@@ -50,7 +50,7 @@ This is a sample Go application demonstrating the integration with the Netopia P
 
 ### 2. `/ipn` (POST)
 
-**Description:** Processes Instant Payment Notifications (IPN) from Netopia.  
+**Description:** Processes Instant Payment Notifications (IPN) from NETOPIA.  
 
 **Response:**
 - Validates the IPN and returns a confirmation response.
@@ -79,7 +79,7 @@ This is a sample Go application demonstrating the integration with the Netopia P
 ```
 .
 ├── collection           # Basic POSTMAN collection for calling the endpoints of the sample app
-│   └── Netopia GO SDK Sample.postman_collection.json        
+│   └── NETOPIA GO SDK Sample.postman_collection.json        
 ├── cmd
 │   └── main.go          # Entry point of the application
 ├── config
