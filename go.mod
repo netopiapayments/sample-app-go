@@ -5,7 +5,7 @@ go 1.23.4
 require (
 	github.com/gin-gonic/gin v1.10.0
 	github.com/joho/godotenv v1.5.1
-	github.com/netopiapayments/go-sdk v1.1.3
+	github.com/netopiapayments/go-sdk v0.0.0-20241217142736-00bc6e664671
 )
 
 require (

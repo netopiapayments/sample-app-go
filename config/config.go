@@ -12,7 +12,6 @@ import (
 type Config struct {
 	APIKey          string
 	PosSignature    string
-	ActiveKey       string
 	PublicKey       []byte
 	IsLive          bool
 	NotifyURL       string
@@ -34,7 +33,6 @@ func LoadConfig() (*Config, error) {
 	cfg := &Config{
 		APIKey:       os.Getenv("API_KEY"),
 		PosSignature: os.Getenv("POS_SIGNATURE"),
-		ActiveKey:    os.Getenv("ACTIVE_KEY"),
 		PublicKey:    []byte(os.Getenv("PUBLIC_KEY")),
 		IsLive:       isLive,
 		NotifyURL:    os.Getenv("NOTIFY_URL"),
@@ -53,7 +51,6 @@ func NewNetopiaClient(cfg *Config) (*netopia.PaymentClient, error) {
 		NotifyURL:       cfg.NotifyURL,
 		RedirectURL:     cfg.RedirectURL,
 		PublicKey:       cfg.PublicKey,
-		ActiveKey:       cfg.ActiveKey,
 		PosSignatureSet: cfg.PosSignatureSet,
 	}
 
